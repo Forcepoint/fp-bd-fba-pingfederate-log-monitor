@@ -1,0 +1,9 @@
+[Unit]
+Description=Run fba-ping-failed-logins-mfa-job.service every 5 minutes
+
+[Timer]
+OnUnitActiveSec=5min
+Unit=fba-ping-failed-logins-mfa-job.service
+
+[Install]
+WantedBy=multi-user.target

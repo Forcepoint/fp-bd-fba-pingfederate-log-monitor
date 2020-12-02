@@ -1,0 +1,16 @@
+[Unit]
+Description=This service watches Ping audit log and sends the failed attempts into FBA
+
+[Service]
+Environment=
+User=
+ExecStart=/bin/bash -c '${APP_HOME}/source/start-fba-ping-streamed-events.sh'
+Restart=on-failure
+RestartSec=60
+StartLimitBurst=3
+StartLimitInterval=360
+
+[Install]
+WantedBy=multi-user.target
+
+

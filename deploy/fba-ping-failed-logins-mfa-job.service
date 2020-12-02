@@ -1,0 +1,10 @@
+[Unit]
+Description=This service runs a job to send Ping MFA failed events into FBA
+
+[Service]
+Environment=
+User=
+ExecStart=/bin/bash -c '${APP_HOME}/source/run-fba-ping-mfa-batch-events.sh'
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=This service runs a batch job to send Ping failed login events into FBA in case FBA was down and missed some of the events.
+
+[Service]
+Environment=
+User=
+ExecStart=/bin/bash -c '${APP_HOME}/source/run-fba-ping-batch-events.sh'
+
+[Install]
+WantedBy=multi-user.target

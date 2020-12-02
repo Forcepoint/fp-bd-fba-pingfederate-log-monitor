@@ -1,0 +1,10 @@
+[Unit]
+Description=Run fba-ping-failed-logins-batch-job.service weekly and 30 minutes after boot up
+
+[Timer] 
+OnBootSec=30min
+OnUnitActiveSec=1w
+Unit=fba-ping-failed-logins-batch-job.service 
+
+[Install]
+WantedBy=multi-user.target
